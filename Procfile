@@ -1,1 +1,1 @@
-web: gunicorn soundplug.wsgi
+web: gunicorn soundplug.wsgi --log-file -

@@ -26,7 +26,7 @@ SECRET_KEY = '6wb_ha)bdamrme@fy3j$u939z^c#79fuyz_&!@y^v4xk9)9%gx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['soundplug.herokuapp.com']
 
 
 # Application definition
@@ -125,3 +125,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
+
+import dj_database_url
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
