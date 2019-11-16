@@ -7,7 +7,7 @@ def home(request):
     return render(request, 'base.html')
 
 
-
+# TODO: FINISH THE SEARCH FUNCTION
 def new_search(request):
     search = request.POST.get('search')
     models.Search.objects.create(search=search)
