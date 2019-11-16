@@ -1,17 +1,19 @@
 <div class="row mt-2">
-    <div class="col-2">
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 col-xl-2">
     </div>
-    <div class="col-2 mt-5 mr-0 mb-5">
+    <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-xl-2 mr-0 mb-5">
         <div class="center mt-5">
             <img style="width: 100%" src="../static/logo.png" alt="">
         </div>
     </div>
-    <div class="col-6 ml-0 mt-5" style="background-image: url('../static/soundwave.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
+    <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6 col-xl-6 ml-0" style="background-image: url('../static/soundwave.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
         <form action="{% url 'new_search' %}" method='post'>
             {% csrf_token %}
-            <input name='search' type='text' style="position: absolute; width: 380px; margin-left: 80px; top: 50px" class="shadow-lg form-control mt-5" type="search" placeholder=" Search">
+            <div class="input-group input-group input-group-xs-sm mt-5">
+                <input name='search' type='text' class="shadow-lg form-control mt-5" type="search" placeholder=" Search">
+            </div>
         </form>
     </div>
-    <div class="col-2">
+    <div class="col-xs-0 col-sm-0 col-md-2 col-lg-2 col-xl-2">
     </div>
 </div>
