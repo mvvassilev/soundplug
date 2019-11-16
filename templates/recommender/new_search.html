@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h5 style="text-align: center">Search results for: "{{ search | title }}"</h5>
+
+    <div class="row">
+
+        {% for i in results %}
+    
+            <div class="col-3 mt-5">
+                <div class="card">
+                    <div class="card-img-top">
+                        <a href="/"><img src="../../static/logo.png" style="height: 200px" alt=""></a>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-title">Song name goes here</p>
+                        <p class="card-text">Song description goes here</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="/">Listen to the song</a>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock content %}

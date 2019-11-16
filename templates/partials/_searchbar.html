@@ -7,7 +7,10 @@
         </div>
     </div>
     <div class="col-6 ml-0 mt-5" style="background-image: url('../static/soundwave.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
-        <input style="position: fixed; width: 380px; margin-left: 80px; top: 190px" class="shadow-lg form-control mt-5" type="search" placeholder=" Search">
+        <form action="{% url 'new_search' %}" method='post'>
+            {% csrf_token %}
+            <input name='search' type='text' style="position: absolute; width: 380px; margin-left: 80px; top: 50px" class="shadow-lg form-control mt-5" type="search" placeholder=" Search">
+        </form>
     </div>
     <div class="col-2">
     </div>
