@@ -10,7 +10,8 @@
         <form action="{% url 'new_search' %}" method='post'>
             {% csrf_token %}
             <div class="input-group input-group input-group-xs-sm mt-5">
-                <input name='search' type='text' class="shadow-lg form-control mt-5" type="search" placeholder=" Search">
+                <input name='search' type='text' class="shadow-lg form-control mt-5" type="search" placeholder=" 
+                Search (format: Artist - Name of the Song)">
             </div>
         </form>
     </div>
