@@ -5,19 +5,16 @@
 
     <div class="row">
 
-        {% for i in results %}
+        {% for result in results %}
     
             <div class="col-3 mt-5">
                 <div class="card">
                     <div class="card-img-top">
-                        <a href="/"><img src="../../static/record.png" style="width: 100%" alt=""></a>
+                        <a href="/"><img id="currentPhoto" style='width: 100%' src="{{ result.2 }}" onerror="this.onerror=null; this.src='../../static/record.png'"></a>
                     </div>
                     <div class="card-body">
-                        <p class="card-title">Song name goes here</p>
-                        <p class="card-text">Song description goes here</p>
-                    </div>
-                    <div class="card-footer">
-                        <a href="/">Listen to the song</a>
+                        <p class="card-title"><b>{{ result.0 | title }}</b></p>
+                        <p class="card-text">{{ result.1 | title }}</p>
                     </div>
                 </div>
             </div>

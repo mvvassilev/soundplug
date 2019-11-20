@@ -1,6 +1,40 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white mb-4 justify-content-md-between justify-content-start">
-    <a class="navbar-brand text-primary ml-5 bg-white pr-3 pl-3" href="/">Soundplug</a>
-    <a class="ml-5" href="https://github.com/mvvassilev/soundplug">
-        <img class='pt-1' src="../../static/GitHub-Mark/PNG/GitHub-Mark-32px.png" alt="" />
-    </a>
+    
+
+    <button type="button" class="btn btn-outline-info mr-5" data-toggle="popover"
+     data-placement="bottom" data-content="
+        {% for song in songs_list %}
+            {{ song.artist }} - {{ song.song_title}}
+        {% endfor %}
+     ">songs</button>
+
+    <div class="ml-5 pr-3 pl-3">
+        <a class="navbar-brand text-primary bg-white" href="/">Soundplug</a>
+        <a class="navbar-brand-sm text-secondary bg-white"><i>enjoy music</i></a>        
+    </div>
+
+
+    {% comment %} Github and Info buttons {% endcomment %}
+    <div class="ml-5">
+        <a data-toggle="popover" data-placement="bottom" data-content="Welcome to Soundplug,
+        a platform, which recommends music to you based on the songs you like
+        
+        
+        In order to search for a song, write the song in format:
+            SONG ARTIST - SONG NAME
+            
+            (example: Future - Mask Off). 
+        
+        To see all all the songs in the data frame click the SONGS button on the left. 
+
+        Unfortunately, the data frame I was able to find wasn't very inclusive and 
+        only consists of 2000 songs but you're welcome to browse as much 
+        as you like! Also, check out the github page on the right to see the source
+        code">
+            <img src="../../static/info.png" style="width: 40px"/>
+        </a>
+        <a href="https://github.com/mvvassilev/soundplug">
+            <img src="../../static/GitHub-Mark/PNG/GitHub-Mark-32px.png" alt="" />
+        </a>
+    </div>
 </nav>

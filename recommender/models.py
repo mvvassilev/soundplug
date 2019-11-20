@@ -12,3 +12,11 @@ class Search(models.Model):
 
     def __str__(self):
         return f'{self.created}: {self.search}'
+
+class Song(models.Model):
+    song_title = models.CharField(max_length=500)
+    artist = models.CharField(max_length=500)
+
+    def __str__(self):
+        return f'{self.artist} - {self.song_title}'
+    
